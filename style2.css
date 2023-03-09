@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.cheader {
+    background-color: skyblue;
+    grid-area: header;
+}
+
+.cmain {
+    background-color: coral;
+    grid-area: main;
+}
+
+.csidebar {
+    
+}
