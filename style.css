@@ -4,60 +4,66 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: white;
 }
 
-body {
+.wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: .5rem;
+    grid-template-areas: 
+    "header"
+    "main"
+    "aside-main"
+    "sidebar"
+    "aside-sec"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
     height: 100vh;
-    gap: 0.2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    @media (min-width: 48em) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: .5fr 2fr .5fr .5fr;
+        grid-template-areas:
+        "header    header        header       header       header      header"
+        ".         main          main         main         sidebar     .     " 
+        ".         aside-main    aside-main   aside-sec    aside-sec   .     "
+        "footer    footer        footer       footer       footer      footer"
+        ;
+    }
 }
 
-header {
-    grid-column: 1/6;
+
+
+
+.c-header {
     background-color: skyblue;
-    color: white;
+    grid-area: header;
 }
 
-main {
-    grid-column: 2/span 2;
-    background-color: lightcoral;
-    color: white;
+.c-main {
+    background-color: coral;
+    grid-area: main;
 }
 
-div.sidebar {
-    grid-column: 4/5;
-    background-color: rgb(31, 31, 247);
-    color: white;
+.c-sidebar {
+    background-color: royalblue;
+    grid-area: sidebar;
 }
 
-aside {
-    display: grid;
-    grid-row: 3;
-    grid-column: 2/5;
-    grid-template-columns: 1fr 1fr;
-    background-color: blueviolet;
-    color: white;
+.c-aside-main {
+    background-color: purple;
+    grid-area: aside-main;
 }
 
-/*
-aside#aside1 {
-    grid-row: 3;
-    grid-column: 2/span 2;
-    background-color:blueviolet;
-    color: white;
+.c-aside-sec {
+    background-color: purple;
+    grid-area: aside-sec;
 }
 
-aside#aside2 {
-    grid-row: 3;
-    grid-column: 3/span 2;
-    background-color: blueviolet;
-    color: white;
-}
-*/
-footer {
-    grid-column: 1/6;
+.c-footer {
     background-color: skyblue;
-    color: white;
+    grid-area: footer;
 }
