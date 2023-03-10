@@ -56,27 +56,42 @@
 }
 
 .cmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: coral;
     grid-area: main;
 }
 
 .csidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: blue;
     grid-area: sidebar;
 
 }
 
 .caside1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: purple;
     grid-area: aside1;
 }
 
 .caside2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: purple;
     grid-area: aside2;
 }
 
 .cfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: skyblue;
     grid-area: footer;
 }
