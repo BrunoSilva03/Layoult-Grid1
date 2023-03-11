@@ -26,7 +26,7 @@
         }
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 48em) { /* 768px */
     .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
