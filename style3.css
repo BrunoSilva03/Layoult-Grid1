@@ -4,16 +4,22 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: white;
 }
 
-@media screen and(max-width: 47em) {
+@media screen and (max-width: 47em) {
     .wrapper {
         display: grid;
-        grid-gap: 0.5;
+        grid-gap: .5;
         grid-template-areas: 
         "header"
         "hero"
-        "sub"
+        "sub1"
+        "sub2"
+        "sub3"
+        "sub4"
+        "sub5"
+        "sub6"
         "content"
         "aside"
         "footer"
@@ -22,39 +28,110 @@
     }
 }
 
-@media screen and(min-width: 48em) {
+@media screen and (min-width: 47em) {
     .wrapper {
         display: grid;
-        
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin: 0 auto;
+        max-width: 1200px;
+        grid-gap: .3rem;
+        height: 100vh;
+        grid-template-areas: 
+        "header   header   header   header   header   header   header    header   header   header   header    header"
+        ".        .        .        hero     hero     hero     hero      hero     hero     .        .         .     "
+        ".        .        .        sub1     sub2     sub3     sub4      sub5     sub6     .        .         .     "
+        ".        .        .        content  content  content  content   content  content  .        .         .     "
+        "aside    aside    aside    aside    aside    aside    aside     aside    aside    .        .         .     "
+        "footer   footer   footer   footer   footer   footer   footer    footer   footer   footer   footer    footer"
+         ;
     }
 }
 
 .cheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: skyblue;
     grid-area: header;
 }
 
 .chero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: green;
     grid-area: hero;
 }
 
-.csub {
+.csub1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: coral;
-    grid-area: sub
+    grid-area: sub1;
+}
+
+.csub2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+    grid-area: sub2;
+}
+
+.csub3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+    grid-area: sub3;
+}
+
+.csub4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+    grid-area: sub4;
+}
+
+.csub5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+    grid-area: sub5;
+}
+
+.csub6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+    grid-area: sub6;
 }
 
 .ccontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(43, 43, 223);
     grid-area: content
 }
 
 .caside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(197, 197, 53);
     grid-area: aside;
 }
 
 .cfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: skyblue;
     grid-area: footer;
 }
