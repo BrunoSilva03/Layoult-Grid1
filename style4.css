@@ -4,34 +4,138 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: white;
+}
+
+@media screen and (max-width: 48em) {
+    .wrapper {
+        display: grid;
+        height: 100vh;
+        grid-gap: .3rem;
+        grid-template-areas:
+        "header" 
+        "hero"
+        "sub1"
+        "sub2"
+        "sub3"
+        "sub4"
+        "sub5"
+        "sub6"
+        "content"
+        "aside"
+        "footer"
+        ;
+    }
+}
+
+
+@media screen and (min-width: 48em) {
+    .wrapper {
+        display: grid;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 33px;
+        grid-gap: .3rem;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+        "header   header   header   header   header   header   header  header  header  header  header  header"
+        ".        .        .        hero     hero     hero     hero    hero    hero    .       .       .     "
+        ".        .        .        hero     hero     hero     hero    hero    hero    .       .       .     "
+        ".        .        .        sub1     sub2     sub3     sub4    sub5    sub6    .       .       .     "
+        ".        .        .        content  content  content  content content content .       .       .     "
+        "aside    aside    aside    aside    aside    aside    aside   aside   aside   .       .       .     "
+        "footer   footer   footer   footer   footer   footer   footer  footer  footer  footer  footer  footer"
+
+        ;
+    }
 }
 
 .cheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: skyblue;
     grid-area: header;
 }
 
 .chero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(74, 156, 74);
     grid-area: hero;
 }
 
 .csub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: coral;
     grid-area: sub;
 }
 
+.csub#idsub1 {
+    grid-area: sub1;
+}
+
+.csub#idsub2 {
+    grid-area: sub2;
+}
+
+.csub#idsub3 {
+    grid-area: sub3;
+}
+
+
+.csub#idsub4 {
+    grid-area: sub4;
+}
+
+
+.csub#idsub5 {
+    grid-area: sub5;
+}
+
+
+.csub#idsub6 {
+    grid-area: sub6;
+}
+
 .ccontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(38, 38, 224);
     grid-area: content;
 }
 
-.caside {
-    background-color: rgb(176, 176, 51);
-    grid-area: aside;
+@media screen and (max-width: 48em) {
+    .caside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(176, 176, 51);
+        grid-area: aside;
+    }
 }
 
+@media screen and (min-width: 48em) {
+    .caside {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-right: 345px;
+        background-color: rgb(176, 176, 51);
+        grid-area: aside;
+    }
+}
+
+
 .cfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: skyblue;
     grid-area: footer;
 }
