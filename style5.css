@@ -42,7 +42,27 @@
 }
 
 
+@media screen and (min-width: 992px) {
+    .wrapper {
+        display: grid;
+        grid-gap: .1rem;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 33px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "meta   title   title   title   copy2   copy2"
+        "copy1  copy1   copy1   copy1   copy2   copy2"
+        "media  media   media   media   media   media"
+        "aside  aside   .       .       .       .    "
+        ;
+    }
 
+    .caside {
+        overflow: hidden;
+    }
+}
 
 .ctitle {
     display: flex;
