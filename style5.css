@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: grid;
+        grid-gap: .1rem;
+        height: 100vh;
+        grid-template-areas: 
+        "title"
+        "meta"
+        "copy1"
+        "copy2"
+        "media"
+        "aside"
+        ;
+    }
+}
+
+.ctitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(38, 247, 244);
+    grid-area: title;
+}
+
+.cmeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(193, 192, 192);
+    grid-area: meta;
+}
+
+.ccopy1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(58, 58, 228);
+    grid-area: copy1;
+}
+
+.ccopy2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rosybrown;
+    grid-area: copy2;
+}
+
+.cmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 245, 74);
+    grid-area: media;
+}
+
+.caside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 94, 0);
+    grid-area: aside;
+}
