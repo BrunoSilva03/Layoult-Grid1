@@ -1,1 +1,38 @@
 @charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.cheader {
+    background-color: skyblue;
+    grid-area: header;
+}
+
+.chero {
+    background-color: rgb(74, 156, 74);
+    grid-area: hero;
+}
+
+.csub {
+    background-color: coral;
+    grid-area: sub;
+}
+
+.ccontent {
+    background-color: rgb(38, 38, 224);
+    grid-area: content;
+}
+
+.caside {
+    background-color: rgb(176, 176, 51);
+    grid-area: aside;
+}
+
+.cfooter {
+    background-color: skyblue;
+    grid-area: footer;
+}
+
